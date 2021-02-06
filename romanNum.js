@@ -45,5 +45,6 @@ let romanToInt = s => { //changed var to let,used the arrow function syntax
         }
         console.log(mapped)
         console.log(mapped.reduce(reducer))
-        return mapped.reduce(reducer)
+        document.getElementById("reveal").innerhtml = mapped.reduce(reducer)
+        
     };
