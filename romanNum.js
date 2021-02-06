@@ -1,7 +1,8 @@
-let romanToInt = s => { //changed var to let,used the arrow function syntax
+let romanToInt = event => { //changed var to let,used the arrow function syntax
     //the process - even if the exceptions are identified its hard to put all the data in one array in order
+    event.preventDefault()
         let reducer = (currentVal, accumulator) => {return currentVal + accumulator }
-        let arr = s.split('')
+        let arr = document.getElementById('box').value.split('')
        let mapped = arr.map(x=>{
            switch(x){
                case "I":
@@ -43,8 +44,6 @@ let romanToInt = s => { //changed var to let,used the arrow function syntax
                 i++
             }
         }
-        console.log(mapped)
-        console.log(mapped.reduce(reducer))
-        document.getElementById("reveal").innerhtml = mapped.reduce(reducer)
-        
+        document.getElementById("reveal").innerHTML = `This roman numeral is ${mapped.reduce(reducer)}`
+   
     };

@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" initial-scale="1.0">
     <title>Document</title>
-    <script> "./index.js"</script>
+    <script src = "./romanNum.js"></script>
 </head>
 <body>
-    <form onSubmit="romanToInt">
+    <form onSubmit="romanToInt(event)">
+        
 <label>Enter a roman numeral to see the value, use "I","V","X","L","C","D","M"</label>
-<input type = "text"> 
+<input type = "text" id="box"> 
+<input type = "submit">
     </form>
     <div id="reveal">
 
     </div>
+ 
 </body>
 </html>
