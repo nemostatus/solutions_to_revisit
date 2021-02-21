@@ -28,3 +28,13 @@ string.push("1")
 }
 
 The function above takes a number and returns a string of alternating "01". The most useful bit of code from this snippet is if( count/2 % 1 === 0) which is checking to see if the count divided by 2 is a float or a whole integer. Checking the type wont work, it s labeled the same, a number. So by checking the remainder the programmer can determine if the number is a float or a whole number. This is another useful bit of knowledge to know for future reference.
+
+
+function fakeBin(x){
+let arr = x.split('')
+return arr.map(x=>{
+return parseInt(x) < 5 ? '0': '1'
+}).join('')
+}
+
+The function above is my solution for taking in a string of numbers like '45385593107843568' and returning the binary value of it. any digit with a val under 5 is 0 and above it a 1. This is a function that is difficult to see how it can be refactored. There isn't an unecessary if else statement and instead a ternary statement is used. returning a new array(later joined) based on the integer value w parse int, and if lower than 5 return 0 and above a 1 so i think im proud of how this solution turned out.
