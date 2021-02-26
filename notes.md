@@ -37,7 +37,19 @@ return parseInt(x) < 5 ? '0': '1'
 }).join('')
 }
 
-The function above is my solution for taking in a string of numbers like '45385593107843568' and returning the binary value of it. any digit with a val under 5 is 0 and above it a 1. This is a function that is difficult to see how it can be refactored. There isn't an unecessary if else statement and instead a ternary statement is used. returning a new array(later joined) based on the integer value w parse int, and if lower than 5 return 0 and above a 1 so i think im proud of how this solution turned out.
+The function above is my solution for taking in a string of numbers like '45385593107843568' and returning the binary value of it. any digit with a val under 5 is 0 and above it a 1. This is a function that is difficult to see how it can be refactored. There isn't an unecessary if else statement and instead a ternary statement is used. returning a new array(later joined) based on the integer value w parse int, and if lower than 5 return 0 and above a 1 so i think im proud of how this solution turned out. Let's check out the best practice for this .It's alot less code, I'll see why.
+function fakeBin(x) {
+    return x.split('').map(n => n < 5 ? 0 : 1).join('');
+}
+ok so it seems I tend to declare and assign variables unecessarily. I dont understand however why theres no parse
+int to turn the elment into an integer,implicit syntax is also used
+differences
+------------
+1.vars declared when shouldnt be
+2.implicit syntax shoould be used
+3.unecessary parseint is used,, in js a string number can be compared to an integer
+
+im going to test strings and integers with comparison operators in dev tools to see the result.it works
 
 
 
