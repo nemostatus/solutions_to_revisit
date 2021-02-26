@@ -27,7 +27,27 @@ string.push("1")
   return string.join('')
 }
 
-The function above takes a number and returns a string of alternating "01". The most useful bit of code from this snippet is if( count/2 % 1 === 0) which is checking to see if the count divided by 2 is a float or a whole integer. Checking the type wont work, it s labeled the same, a number. So by checking the remainder the programmer can determine if the number is a float or a whole number. This is another useful bit of knowledge to know for future reference.
+The function above takes a number and returns a string of alternating "01". The most useful bit of code from this snippet is if( count/2 % 1 === 0) which is checking to see if the count divided by 2 is a float or a whole integer. Checking the type wont work, it s labeled the same, a number. So by checking the remainder the programmer can determine if the number is a float or a whole number. This is another useful bit of knowledge to know for future reference.I'm going to see best practices for the solution above. The following code isnt considered top best practice but the code is alot shorter and i want to know how
+
+const stringy = x => ''.padStart(x,'10');
+
+ok so from left to right, a function using arrow function syntax takes in an integer then returns alternating 0s and 1s starting with 1 the length of the integer.Testing the shorter code actually works. but how?
+whats padstart, mozilla says The padStart() method pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. there example
+
+const str1 = '5';
+
+console.log(str1.padStart(2, '0'));
+// expected output: "05"
+so 5.padstart(2,'0')
+the 5 is padded by the 0 until total length is 2 so '05'
+
+so
+lets say input is 5 
+'' or empty space is  padded with 01 so what if the length is just 1
+it just returns half the string or 1 in this case
+
+I guess the lesson to take away here is that there may be a method out there that makes everything easier
+also look into creating my own library of code where i can build my own methods(project idea)
 
 
 function fakeBin(x){
